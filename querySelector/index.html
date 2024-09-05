@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="msg">HTML</h1>
+    <h1 class="msg">CSS</h1>
+    <div id="container">
+        <h1 class="msg">JavaScript</h1>
+        <h1 class="msg">DOM</h1>
+    </div>
+    <script>
+        let message=document.querySelector(".msg");
+        console.log(message);
+        let message1=document.querySelectorAll(".msg");
+        console.log(message1);
+        let cont=document.getElementById("container");
+        let message3=cont.querySelectorAll(".msg");
+        console.log(message3);
+        let message4=document.querySelectorAll("div");
+        console.log(message4);
+        let message5=document.querySelectorAll("div h1");
+        console.log(message5);
+        let message6=document.querySelectorAll("div.h1");
+        console.log(message6);
+    </script>
+    
+</body>
+</html>

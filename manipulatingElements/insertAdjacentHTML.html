@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Explore</li>
+        <li>Project</li>
+    </ul>
+    <script>
+        let menu=document.getElementById("menu");
+        menu.insertAdjacentHTML("beforeend", "<li>Exit</li>");
+        menu.insertAdjacentHTML("afterEnd", "<li>Logout</li>");
+        menu.insertAdjacentHTML("beforeBegin", "<li>Login</li>");
+        menu.insertAdjacentHTML("afterBegin", "<li>Welcome</li>");
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JavaScript</p>
+    <p>Python</p>
+    <p>Java</p>
+    <button onclick="myFunction()">ClickMe</button>
+
+    <script>
+        function myFunction(){
+            let para=document.getElementsByTagName("p");
+            /*
+            para[0].style.fontSize=25;
+            para[1].style.color="red";
+            para[2].style.fontWeight="bold";
+            para[3].style.fontStyle="italic";
+            para[4].style.fontSize=15;
+            */
+           for(let i=0;i<para.length;i++){
+            para[i].style.color="blue";
+
+           }
+        }
+    </script>
+</body>
+</html>

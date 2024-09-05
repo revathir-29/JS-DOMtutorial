@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Explore</li>
+        <li>Project</li>
+    </ul>
+    <script>
+        let menu=document.getElementById("menu");
+        let list=document.createElement("li");
+        list.innerHTML="Contact";
+        menu.appendChild(list);
+        console.log(list);
+        //append()
+        menu.append("Exit" , " Logout");
+        //prepend
+        menu.prepend("Exit" , " Logout");
+        //replaceChild
+        //menu.replaceChild(Welcome , Home);
+        //cloneNode()
+        let welcome=menu.cloneNode(false);
+        let welcome1=menu.cloneNode();//bydefault its false
+        let welcome2=menu.cloneNode(true);
+        console.log(welcome);
+        console.log(welcome1);
+        console.log(welcome2);
+        //removeChild
+        menu.removeChild(menu.lastElementChild);
+        menu.removeChild(menu.firstElementChild);
+        //insertBefore()
+        //menu.insertBefore(Newnode , menu.firstElementChild);
+         
+
+
+
+    </script>
+    
+</body>
+</html>

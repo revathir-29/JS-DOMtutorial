@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Email id validation</h1>
+    <br>
+    <input type="text" id="number" placeholder="Enter your Email address"><br>
+    <label id="check" style="visibility: hidden;">*invalid</label><br>
+    <button onclick="validation()" type="button">Check</button>
+    <script>
+        
+        function validation(){
+            var text1=document.getElementById("number").value;
+            var reg1=/^([a-z 0-9\.-]+)@([a-z 0-9-]+).([a-z]{1,8})(.[a-z]{1-8})$/;
+            if(reg1.test(text1)){
+                document.getElementById("check").innerHTML="valid";
+                document.getElementById("check").style.visibility="visible";
+                document.getElementById("check").style.color="green";
+            }
+            else{
+                document.getElementById("check").innerHTML="*invalid";
+                document.getElementById("check").style.visibility="visible";
+                document.getElementById("check").style.color="red";
+            } 
+        }
+        //abc123@gmail.com
+        //xyz@abc.co.in\
+        // .=>treated as a special char eg/a.b/ (we'll write any characterb/w a and b)
+        // ? - optional
+
+    </script>
+    
+</body>
+</html>

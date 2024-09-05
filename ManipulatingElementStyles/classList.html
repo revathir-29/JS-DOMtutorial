@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="main message">Document Object Model</h1>
+    <script>
+        let title=document.getElementById("title");
+        console.log(title.classList);
+        //add , remove class
+        title.classList.add("container");
+        title.classList.add("container", "new");
+        console.log(title);
+
+        title.classList.remove("new");
+        title.classList.remove("new", "container" , "main");
+        console.log(title);
+
+        title.classList.replace("message","new");
+        console.log(title);
+
+        console.log( title.classList.contains("new"));
+        console.log( title.classList.contains("msg"));
+        title.classList.toggle("message");// If the classname is there means it will remove , not there means it will add
+        console.log(title);
+
+
+
+    </script>
+    
+</body>
+</html>

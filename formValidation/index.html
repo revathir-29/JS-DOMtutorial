@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+
+    <script>
+        function myFunction(){
+        let username=document.getElementById('input1');
+        let password=document.getElementById('input2');
+    
+        if(username.value.trim()=="" || password.value.trim()==""){
+            alert("No blank values allowed");
+            return false;
+        }
+        else{
+            return true;
+
+        }
+    }
+    /*In HTML also we'll do the form validation by using "required" */
+    </script>
+    </head>
+
+    <form action="form.html" onsubmit="return myFunction()">
+    <input type="text" id="input1" placeholder="UserName"><br><br>
+    <input type="password" id="input2" placeholder="Password"><br><br>
+    <button id="btn1" type="submit">ClickMe</button>
+</form>
+
+    
+</body>
+</html>

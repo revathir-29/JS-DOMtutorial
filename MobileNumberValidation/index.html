@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mobile number validation</h1>
+    <br>
+    <input type="text" id="number" placeholder="Enter you mobile number"><br>
+    <label id="check" style="visibility: hidden;">*invalid number</label><br>
+    <button onclick="validation()" type="button">Check</button>
+    <script>
+        function validation(){
+            let text=document.getElementById("number").value;
+            let reg=/^[7-9]\d{9}$/;
+            if(reg.test(text)){
+                document.getElementById("check").innerHTML="valid";
+                document.getElementById("check").style.visibility="visible";
+                document.getElementById("check").style.color="green";
+            }
+            else{
+                document.getElementById("check").innerHTML="*invalid";
+                document.getElementById("check").style.visibility="visible";
+                document.getElementById("check").style.color="red";
+            } 
+        }
+        //\d - match any digit (equal to [0-9])
+        //\w - match any word character (a-z , A-Z, 0-9 ....speacial chars)
+        //\s - match whitespace character (eg- spaces & tabs)
+        //\t - match a tab only
+        //{9} - how many times
+        //^- start of the reg ex ,$ - end of the reg ex
+        //^[5-9][a-z]{8}[0]$
+
+    </script>
+    
+</body>
+</html>

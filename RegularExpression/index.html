@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="message.html" onsubmit=" return regularExpression()">
+    <input type="text" id="input" placeholder="username"><br>
+    <label id="regex" style="color: red; visibility: hidden;">*invalid username</label>
+    <br>
+    <button type="submit">Click</button>
+
+</form>
+    <script>
+        function regularExpression(){
+            
+            let input=document.getElementById("input").value;
+            let regEx=/E00/i;//i is for case insensitive
+            if(regEx.test(input)){
+                //alert("Valid username");
+                return true;
+
+            }
+            else{
+                //input.style.border="solid 1px red";
+                document.getElementById("regex").style.visibility="visible";
+                return false;
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>

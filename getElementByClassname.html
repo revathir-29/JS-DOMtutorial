@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="p1">HTML</p>
+    <p class="p1">CSS</p>
+    <p class="p1">JavaScript</p>
+    <p>Python</p>
+    <p>Java</p>
+    <a class="p1" href="#">link</a><br>
+    <button onclick="myFunction()">ClickMe</button>
+    <script>
+        function myFunction(){
+
+        let output=document.getElementsByClassName("p1");
+        for(let i=0;i<output.length;i++){
+            output[i].style.color="violet";
+        }
+    }
+
+    </script>
+    
+</body>
+</html>

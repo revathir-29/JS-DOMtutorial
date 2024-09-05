@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="message.html" onsubmit=" return regularExpression()">
+        <input type="text" id="input" placeholder="username"><br>
+        <label id="regex" style="color: red; visibility: hidden;">*invalid username</label>
+        <br>
+        <button type="submit">Click</button>
+    
+    </form>
+        <script>
+            function regularExpression(){
+                
+                let input=document.getElementById("input").value;
+                let regEx=/[^0-9][a-z]/;
+                if(regEx.test(input)){
+                    //alert("Valid username");
+                    return true;
+    
+                }
+                else{
+                    //input.style.border="solid 1px red";
+                    document.getElementById("regex").style.visibility="visible";
+                    return false;
+                }
+            }
+        </script>
+
+    <script>
+        //var regx=/[abc]imple/; (the string should be starts with a,b or c and imple-charecter set)
+        //var regx=/[a-v A-V]00/; (the range from a to v)
+        // var rex=/[0-5]a[6-9][a-z];
+        //var regex=/[^123]abc; (our string shouldn't be starts with 123)
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Select Anyone</h1>
+    <select name="select" id="selectAnyone">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+       
+    </select>
+    <br><br>
+    <button onclick="myFunction()">ClickMe</button>
+    <script>
+        function myFunction(){
+            let input=document.getElementById("selectAnyone");
+            alert(input.options[input.selectedIndex].value);
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            background-color: black;
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="user" placeholder="username">
+    <script>
+        let input=document.getElementById("user");
+        //window.getComputedStyle(element, pseudoElement)
+        console.log(window.getComputedStyle(input));
+        console.log(window.getComputedStyle(input).fontSize);
+        console.log(window.getComputedStyle(input).backgroundColor);
+
+    </script>
+
+    
+</body>
+</html>
